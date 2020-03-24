@@ -1,7 +1,26 @@
+.logo {
+    background-color: #8B2635;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.logoTitle {
+    color: #FFFFFF;
+    padding: 2%;
+    font-size: 1em;
+    margin-top: 10%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 .wholePage {
     background-color: #F7AF9D;
     height: 100%;
     margin-top: -10%;
+    margin-bottom: -10%;
+    align-items: flex-start;
 }
 
 .mainTitle {
@@ -11,12 +30,23 @@
     font-family: Quicksand, sans-serif;
     color: #EEEEEE;
     padding-top: 30%;
+    margin-top: -10%;
 }
 
-.className {
-
+.question {
+    font-size: 2em;
+    color: #EEEEEE;
+    text-align:center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 5%;
 }
 
 .result {
-    
+    font-size: 2em;
+    color: #EEEEEE;
+    text-align:center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 5%;
 }
