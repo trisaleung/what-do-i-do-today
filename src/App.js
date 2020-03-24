@@ -18,6 +18,10 @@ function App() {
       <p>button goes here to scroll down</p>
 
       <p className="question">do you want to stay indoors or outdoors?</p>
+        {/* <form>
+          <input type="radio">indoors</input>
+          <input type="radio">outdoors</input>
+        </form> */}
       <p className="question">how tired are you?</p>
       <p className="question">what time is it?</p>
       <p className="question">some hobbies are:</p>
