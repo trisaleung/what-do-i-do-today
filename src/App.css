@@ -1,0 +1,14 @@
+.wholePage {
+    background-color: #F7AF9D;
+    height: 100%;
+    margin-top: -10%;
+}
+
+.mainTitle {
+    font-size: 4em;
+    text-align: center;
+    padding: 10%;
+    font-family: Quicksand, sans-serif;
+    color: #EEEEEE;
+    padding-top: 30%;
+}
