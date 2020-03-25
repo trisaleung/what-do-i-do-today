@@ -16,11 +16,15 @@ class App extends React.Component {
     });
   };
 
+  handleClickQ1 = onClick => {
+    this.refs.q2.scrollIntoView({behavior: "smooth"});
+  };
+
   handleSubmit = formSubmitEvent => {
     formSubmitEvent.preventDefault();
 
     alert("TESTING: submitted!");
-  }
+  };
 
   render() {
     return (
@@ -41,7 +45,7 @@ class App extends React.Component {
         <form onSubmit={this.handleSubmit} className="form">
           <p className="question">do you want to stay indoors or outdoors?</p>
             <label className="q1Input">
-              <input type="radio" name="question-one" value="indoors" className="inputRadio"
+              <input type="radio" name="question-one-a" value="indoors" className="inputRadio"
                  checked={this.state.selectedOption === "indoors"}
                  onChange={this.handleOptionChange}
               />
@@ -49,21 +53,21 @@ class App extends React.Component {
             </label>
             <br /><br />
             <label className="q1Input">
-              <input type="radio" name="question-one" value="outdoors" className="inputRadio"
+              <input type="radio" name="question-one-b" value="outdoors" className="inputRadio"
                 checked={this.state.selectedOption === "outdoors"}
                 onChange={this.handleOptionChange}
               />
               outdoors
             </label>
             <br /><br />
-            <button className="btn btn-primary mt-2" type="submit">
-               Save
+            <button className="next-button" type="button" onClick={this.handleClickQ1}>
+               next
             </button>
-          </form>
+          <div className="break" ref="q2"></div>
           <p className="question">how tired are you?</p>
           <p className="question">what time is it?</p>
           <p className="question">some hobbies are:</p>
-
+        </form>
         <p className="result">result!!</p>
       </div>
     );

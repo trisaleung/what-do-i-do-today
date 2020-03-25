@@ -46,15 +46,15 @@
     padding: 5%;
 }
 
+.break {
+    padding: 0.5%;
+}
+
 .q1Input {
     font-size: 1.5em;
     color: #EEEEEE;
     text-align: center;
     margin-top: -5%;
-}
-
-.inputRadio {
-    border: 1em solid #D1CFE2;
 }
 
 .result {
