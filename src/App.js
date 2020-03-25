@@ -20,6 +20,14 @@ class App extends React.Component {
     this.refs.q2.scrollIntoView({behavior: "smooth"});
   };
 
+  handleClickQ2 = onClick => {
+    this.refs.q3.scrollIntoView({behavior: "smooth"});
+  };
+
+  handleClickQ3 = onClick => {
+    this.refs.q4.scrollIntoView({behavior: "smooth"});
+  };
+
   handleSubmit = formSubmitEvent => {
     formSubmitEvent.preventDefault();
 
@@ -43,6 +51,7 @@ class App extends React.Component {
         <p>button goes here to scroll down</p>
 
         <form onSubmit={this.handleSubmit} className="form">
+
           <p className="question">do you want to stay indoors or outdoors?</p>
             <label className="q1Input">
               <input type="radio" name="question-one-a" value="indoors" className="inputRadio"
@@ -63,9 +72,24 @@ class App extends React.Component {
             <button className="next-button" type="button" onClick={this.handleClickQ1}>
                next
             </button>
+
           <div className="break" ref="q2"></div>
+
           <p className="question">how tired are you?</p>
+            <button className="next-button" type="button" onClick={this.handleClickQ2}>
+               next
+            </button>
+
+          <div className="break" ref="q3"></div>
+
           <p className="question">what time is it?</p>
+            <button className="next-button" type="button" onClick={this.handleClickQ3}>
+               next
+            </button>
+
+
+          <div className="break" ref="q4"></div>
+
           <p className="question">some hobbies are:</p>
         </form>
         <p className="result">result!!</p>
