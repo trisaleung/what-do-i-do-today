@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTypingEffect from 'react-typing-effect';
 import './App.css';
 
 class App extends React.Component {
@@ -16,15 +17,19 @@ class App extends React.Component {
     });
   };
 
-  handleClickQ1 = onClick => {
+  handleClickStart = () => {
+    this.refs.q1.scrollIntoView({behavior: "smooth"});
+  };
+
+  handleClickQ1 = () => {
     this.refs.q2.scrollIntoView({behavior: "smooth"});
   };
 
-  handleClickQ2 = onClick => {
+  handleClickQ2 = () => {
     this.refs.q3.scrollIntoView({behavior: "smooth"});
   };
 
-  handleClickQ3 = onClick => {
+  handleClickQ3 = () => {
     this.refs.q4.scrollIntoView({behavior: "smooth"});
   };
 
@@ -46,9 +51,13 @@ class App extends React.Component {
         <div className="logoTitle">nudge</div>
       </div>
 
-        <h1 className="mainTitle">what do i do today?</h1>
+        <h1 className="mainTitle"><ReactTypingEffect speed="100" text="what do i do today?" /></h1>
 
-        <p>button goes here to scroll down</p>
+        <button className="next-button" type="button" onClick={this.handleClickStart}>
+            start
+        </button>
+
+        <div className="break" ref="q1"></div>
 
         <form onSubmit={this.handleSubmit} className="form">
 
