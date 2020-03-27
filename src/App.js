@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
+import Slider from 'react-rangeslider'
 import './App.css';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.state = {
-      selectedOption : ""
+      selectedOption : "",
+      volume: 0
     };
   }
 
@@ -33,6 +35,12 @@ class App extends React.Component {
     this.refs.q4.scrollIntoView({behavior: "smooth"});
   };
 
+  handleOnChange = (value) => {
+    this.setState({
+      volume: value
+    })
+  }
+
   handleSubmit = formSubmitEvent => {
     formSubmitEvent.preventDefault();
 
@@ -40,6 +48,8 @@ class App extends React.Component {
   };
 
   render() {
+    var { volume } = this.state
+
     return (
       <div className="wholePage">
 
@@ -85,6 +95,12 @@ class App extends React.Component {
           <div className="break" ref="q2"></div>
 
           <p className="question">how tired are you?</p>
+            <Slider
+              value={volume}
+              orientation="vertical"
+              onChange={this.handleOnChange}
+            />
+
             <button className="next-button" type="button" onClick={this.handleClickQ2}>
                next
             </button>
