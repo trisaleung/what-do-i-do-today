@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import Slider from 'react-rangeslider'
 import './App.css';
 
 class App extends React.Component {
 
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
       selectedOption : "",
-      volume: 0
+      selectedOption : "",
     };
   }
 
@@ -131,18 +130,41 @@ class App extends React.Component {
           <p className="question">
             how tired are you?
           </p>
-          <div className="slider">
-            <Slider
-              min={0}
-              max={10}
-              step={1}
-              value={value}
-              orientation="vertical"
-              onChangeStart={this.handleChangeStart}
-              onChange={this.handleChange}
-              onChangeComplete={this.handleChangeComplete}
-            />
-          </div>
+          <label className="q2Input">
+              <input 
+                type="radio" 
+                name="question-two-a" 
+                value="not-really" 
+                className="inputRadio"
+                checked={this.state.selectedOption === "not-really"}
+                onChange={this.handleOptionChange}
+              />
+              not really
+            </label>
+            <br /><br />
+            <label className="q2Input">
+              <input 
+                type="radio" 
+                name="question-two-b" 
+                value="kind-of" 
+                className="inputRadio"
+                checked={this.state.selectedOption === "kind-of"}
+                onChange={this.handleOptionChange}
+              />
+              kind of
+            </label>
+            <label className="q2Input">
+              <input 
+                type="radio" 
+                name="question-two-c" 
+                value="very" 
+                className="inputRadio"
+                checked={this.state.selectedOption === "very"}
+                onChange={this.handleOptionChange}
+              />
+             very
+            </label>
+            <br /><br />
 
             <button
               className="next-button" 
